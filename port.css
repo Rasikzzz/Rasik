@@ -111,14 +111,14 @@ p, .description, .skill-sub, h3 {
 
 .skill-card {
     background: #141414;
-    border: 1px solid #1f1f1f;
+    border: 2px solid #1f1f1f;
     padding: 25px 30px;
     border-radius: 12px;
     font-size: 1rem;
     text-align: left;
     min-width: 220px;
     cursor: default;
-    transition: transform 0.3s, background 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .skill-card h3 {
@@ -135,9 +135,11 @@ p, .description, .skill-sub, h3 {
 }
 
 .skill-card:hover {
-    background: linear-gradient(90deg, #6cffd8, #3af2f0);
+    background: #141414; /* no fill */
+    border-color: #6cffd8; /* neon outline only */
+    box-shadow: none;      /* removed glow */
     transform: translateY(-5px);
-    color: #000;
+    animation: none;       /* removed animation */
 }
 
 /* Projects */
@@ -151,7 +153,8 @@ p, .description, .skill-sub, h3 {
     background: #141414;
     padding: 25px;
     border-radius: 10px;
-    border: 1px solid #1f1f1f;
+    border: 2px solid #1f1f1f;
+    transition: 0.3s ease-in-out;
 }
 
 .project-card h3 {
@@ -164,6 +167,27 @@ p, .description, .skill-sub, h3 {
     font-family: 'Fira Code', monospace;
     font-size: 1rem;
     color: #bbb;
+}
+
+.project-card:hover {
+    background: #141414;
+    border-color: #6cffd8; 
+    box-shadow: none;     /* removed glow */
+    transform: translateY(-5px);
+    animation: none;      /* removed animation */
+}
+
+/* REMOVE the neonPulse animation entirely */
+@keyframes neonPulse {}
+
+/* CONTACT SECTION LINKS → NEON CYAN */
+.contact-section a,
+.contact-section a:visited {
+    color: #6cffd8;
+}
+
+.contact-section a:hover {
+    color: #ffffff;
 }
 
 /* Footer */
